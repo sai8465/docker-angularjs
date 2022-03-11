@@ -5,7 +5,7 @@ RUN npm install http-server -g
 RUN mkdir -p /home/boilerplate
 WORKDIR /home/boilerplate
 COPY . /home/boilerplate
-RUN npm install
+RUN npm install --force
 RUN npm run prod
 CMD http-server /home/boilerplate/dist
 EXPOSE 8080
